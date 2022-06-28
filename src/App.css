@@ -1,38 +1,79 @@
 .App {
   text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todoListWrapper {
+  height: 540px;
+  overflow-y: auto;
+  background: #fff3f4;
+  padding: 0 10px;
+  border-radius: 10px;
+  margin: 10px 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.todoListWrapper h3 {
+  color: #4b4b4b;
+  margin-top: 10px;
+  border-bottom: 1px solid #ccc;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.todoListWrapper ul {
+  padding: 0;
+  list-style-type: none;
 }
-
-.App-link {
-  color: #61dafb;
+.todoListWrapper ul li{
+  text-align: left;
+  position: relative;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todoListWrapper ul li p {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  width: 484px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #4b4b4b;
+}
+.todoListWrapper ul li p span {
+  color: #a8a8a8;
+  font-size: 12px;
+  position: absolute;
+  left: 0;
+  top: -12px;
+}
+.controls {
+  position: absolute;
+  top: 0;
+  right: 1px;
+}
+.controls span {
+  margin-left: 15px;
+  font-size: 20px;
+}
+span.done {
+  color: #6ec367;
+}
+span.delete {
+  color: red;
+}
+.TodoInput input {
+  max-width: 400px;
+  width: 100%;
+  padding: 10px;
+  margin-right: 10px;
+}
+.TodoInput button {
+  width: 110px;
+  padding: 7px;
+  background: #6ec367;
+  border: 0;
+  color: #fff;
+  border-radius: 7px;
+  font-size: 18px;
+}
+.strikeText{
+  text-decoration: line-through;
+}
+p.strikeText {
+  color: #9bda96 !important;
 }
